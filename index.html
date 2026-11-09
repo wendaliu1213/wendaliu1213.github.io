@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta name="description" content="Liu Wenda — M.S. student at Wuhan University of Technology. Research in generative image compression, diffusion models, and discrete representations." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Liu Wenda | Academic Homepage" />
+  <meta property="og:description" content="Research in diffusion-based image compression, learned representations, and rate–distortion–perception optimization." />
+  <title>Liu Wenda · Academic Homepage</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="profile.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <div class="ambient ambient--one" aria-hidden="true"></div>
+  <div class="ambient ambient--two" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-symbol" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-text" id="brand-name">Liu Wenda<span class="brand-period">.</span></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#research" data-i18n="navResearch">Research</a>
+        <a href="#projects" data-i18n="navProjects">Projects</a>
+        <a href="#publications" data-i18n="navPublications">Publications</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="language-toggle" class="tool-button language-toggle" type="button" aria-label="Switch language" title="Switch language"><span id="language-label">中文</span></button>
+        <button id="theme-toggle" class="tool-button theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle theme">
+          <svg class="theme-icon theme-icon--moon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.7 13.2A9 9 0 0 1 10.8 3.3 9 9 0 1 0 20.7 13.2Z"/></svg>
+          <svg class="theme-icon theme-icon--sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        </button>
+        <button id="menu-toggle" class="tool-button menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="#about" data-i18n="navAbout">About</a>
+      <a href="#research" data-i18n="navResearch">Research</a>
+      <a href="#projects" data-i18n="navProjects">Projects</a>
+      <a href="#publications" data-i18n="navPublications">Publications</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-rule"></span><span data-i18n="heroKicker">M.S. STUDENT · COMPUTER SCIENCE</span></div>
+        <h1 id="hero-title"><span data-i18n="heroLineOne">Exploring the</span><br/><span class="gradient-text" data-i18n="heroLineTwo">future of visual</span><br/><span data-i18n="heroLineThree">compression.</span></h1>
+        <p class="hero-desc" data-i18n="heroDesc">I study how generative models and learned representations can make image compression more efficient, perceptually compelling, and meaningful.</p>
+        <div class="hero-buttons">
+          <a class="button button--primary" href="#research"><span data-i18n="exploreResearch">Explore research</span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          <a class="button button--outline" href="#contact"><span data-i18n="getInTouch">Get in touch</span></a>
+        </div>
+        <div class="hero-affiliation"><div class="affiliation-mark">W</div><div><span class="affiliation-label" data-i18n="affiliatedWith">CURRENTLY AT</span><strong id="hero-university">Wuhan University of Technology</strong></div></div>
+      </div>
+      <div class="hero-art" aria-label="Conceptual illustration of an image compression pipeline" role="img">
+        <div class="art-glow"></div>
+        <div class="visual-stage visual-stage--input">
+          <span class="stage-label" data-i18n="stageInput">01 / INPUT</span>
+          <div class="pixel-image" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <span class="stage-caption" data-i18n="stageVisual">Visual signal</span>
+        </div>
+        <div class="flow-connector" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="visual-stage visual-stage--latent">
+          <span class="stage-label" data-i18n="stageLatent">02 / LATENT</span>
+          <div class="latent-symbol" aria-hidden="true"><span>01</span><span>10</span><span>11</span><span>01</span></div>
+          <span class="stage-caption" data-i18n="stageCompact">Compact tokens</span>
+        </div>
+        <div class="flow-connector" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="visual-stage visual-stage--decode">
+          <span class="stage-label" data-i18n="stageDecode">03 / RECONSTRUCT</span>
+          <div class="decode-symbol" aria-hidden="true"><div class="decode-orb"></div><div class="decode-ring"></div><div class="decode-ring decode-ring--two"></div></div>
+          <span class="stage-caption" data-i18n="stagePerceptual">Generative decoding</span>
+        </div>
+        <div class="diagram-caption"><span class="diagram-dot"></span><span data-i18n="diagramNote">A conceptual view of generative image compression</span></div>
+      </div>
+      <div class="scroll-hint"><span data-i18n="scrollDiscover">SCROLL TO DISCOVER</span><span class="scroll-line" aria-hidden="true"></span></div>
+    </section>
+
+    <section class="section section--surface" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div>
+          <div class="section-heading"><span class="section-index">01 /</span><span data-i18n="sectionAbout">ABOUT ME</span></div>
+          <h2 id="about-title" class="section-title"><span data-i18n="aboutTitle1">Curiosity-driven</span><br/><span class="muted-title" data-i18n="aboutTitle2">research.</span></h2>
+          <p class="body-copy" id="profile-bio"></p>
+          <p class="body-copy about-secondary" data-i18n="aboutSecondary">I am particularly interested in the connection between representation learning, rate constraints, and the behavior of diffusion-based decoders. I aim to ground new ideas in careful paper reading and empirical evaluation.</p>
+        </div>
+        <div class="about-aside">
+          <div class="aside-label" data-i18n="atAGlance">AT A GLANCE</div>
+          <div class="aside-row"><span data-i18n="labelRole">POSITION</span><strong id="aside-degree">M.S. Student in Computer Science</strong></div>
+          <div class="aside-row"><span data-i18n="labelInstitute">INSTITUTION</span><strong id="aside-university">Wuhan University of Technology</strong></div>
+          <div class="aside-row"><span data-i18n="labelPeriod">STUDY PERIOD</span><strong id="aside-period">2026 — Present</strong></div>
+          <div class="aside-divider"></div>
+          <div class="aside-quote"><span>“</span><p data-i18n="asideQuote">Better representations make better reconstructions possible.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="research" aria-labelledby="research-title">
+      <div class="section-topline"><div class="section-heading"><span class="section-index">02 /</span><span data-i18n="sectionResearch">RESEARCH INTERESTS</span></div><span class="section-aside-note" data-i18n="researchAside">WHAT I'M EXPLORING</span></div>
+      <h2 id="research-title" class="section-title"><span data-i18n="researchTitle1">The questions</span><br/><span class="muted-title" data-i18n="researchTitle2">that drive my work.</span></h2>
+      <div class="research-grid" id="research-grid"></div>
+    </section>
+
+    <section class="section section--surface" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-topline"><div class="section-heading"><span class="section-index">03 /</span><span data-i18n="sectionProjects">SELECTED WORK</span></div><span class="section-aside-note" data-i18n="projectAside">RESEARCH IN PROGRESS</span></div>
+        <h2 id="projects-title" class="section-title"><span data-i18n="projectsTitle1">Ideas, exploration,</span><br/><span class="muted-title" data-i18n="projectsTitle2">and ongoing work.</span></h2>
+        <p class="section-intro" data-i18n="projectsIntro">These are ongoing research directions and study activities, not claims of published results or released software.</p>
+        <div class="projects-list" id="projects-list"></div>
+      </div>
+    </section>
+
+    <section class="section container" id="publications" aria-labelledby="publications-title">
+      <div class="section-topline"><div class="section-heading"><span class="section-index">04 /</span><span data-i18n="sectionPublications">PUBLICATIONS</span></div><span class="section-aside-note" data-i18n="publicationsAside">SCHOLARLY OUTPUT</span></div>
+      <h2 id="publications-title" class="section-title"><span data-i18n="pubTitle1">Research takes</span><br/><span class="muted-title" data-i18n="pubTitle2">time to develop.</span></h2>
+      <div class="publication-empty"><span class="empty-icon" aria-hidden="true"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/><path d="M9 7h6m-6 4h8"/></svg></span><div><h3 data-i18n="noPubsTitle">Publications will be listed here.</h3><p data-i18n="noPubsBody">No publications have been added to this page. Future papers and preprints can be included with verified links.</p></div><span class="empty-label" data-i18n="comingSoon">TO BE UPDATED</span></div>
+    </section>
+
+    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div><div class="section-heading"><span class="section-index">05 /</span><span data-i18n="sectionContact">CONTACT</span></div><h2 id="contact-title" class="section-title"><span data-i18n="contactTitle1">Let's exchange</span><br/><span class="gradient-text" data-i18n="contactTitle2">ideas.</span></h2><p class="body-copy" data-i18n="contactDesc">Interested in generative image compression, learned representations, or related research? Feel free to connect.</p><div id="contact-links" class="contact-links"></div><p id="contact-placeholder" class="contact-placeholder" data-i18n="contactPlaceholder">Contact links can be enabled by adding your email or GitHub username in profile.js.</p></div>
+        <div class="contact-pattern" aria-hidden="true"><div class="contact-ring contact-ring--one"></div><div class="contact-ring contact-ring--two"></div><div class="contact-ring contact-ring--three"></div><span class="contact-center">LW</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><div><strong id="footer-name">Liu Wenda</strong><span data-i18n="footerTag"> · Academic Homepage</span></div><div class="footer-meta"><span>© <span id="copyright-year">2026</span></span><span class="footer-sep">·</span><span data-i18n="builtWith">Built with HTML, CSS & JavaScript</span><a href="#top" class="back-top"><span data-i18n="backTop">Back to top</span> ↑</a></div></div></footer>
+</body>
+</html>
