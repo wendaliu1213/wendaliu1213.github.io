@@ -10,7 +10,7 @@
       heroKicker:'M.S. STUDENT · COMPUTER SCIENCE',heroLineOne:'Exploring the',heroLineTwo:'future of visual',heroLineThree:'compression.',
       heroDesc:'I study how generative models and learned representations can make image compression more efficient, perceptually compelling, and meaningful.',
       exploreResearch:'Explore research',getInTouch:'Get in touch',affiliatedWith:'CURRENTLY AT',stageInput:'01 / INPUT',stageLatent:'02 / LATENT',stageDecode:'03 / RECONSTRUCT',stageVisual:'Visual signal',stageCompact:'Compact tokens',stagePerceptual:'Generative decoding',diagramNote:'A conceptual view of generative image compression',scrollDiscover:'SCROLL TO DISCOVER',
-      sectionAbout:'ABOUT ME',aboutTitle1:'Curiosity-driven',aboutTitle2:'research.',aboutSecondary:'I am particularly interested in the connection between representation learning, rate constraints, and the behavior of diffusion-based decoders. I aim to ground new ideas in careful paper reading and empirical evaluation.',atAGlance:'AT A GLANCE',labelRole:'POSITION',labelInstitute:'INSTITUTION',labelPeriod:'STUDY PERIOD',asideQuote:'Better representations make better reconstructions possible.',
+      sectionAbout:'ABOUT ME',aboutTitle1:'Curiosity-driven',aboutTitle2:'research.',aboutSecondary:'I am particularly interested in the connection between representation learning, rate constraints, and the behavior of diffusion-based decoders. I aim to ground new ideas in careful paper reading and empirical evaluation.',atAGlance:'AT A GLANCE',labelRole:'POSITION',labelInstitute:'INSTITUTION',labelPeriod:'STUDY PERIOD',labelEducation:'EDUCATION',asideQuote:'Better representations make better reconstructions possible.',
       sectionResearch:'RESEARCH INTERESTS',researchAside:"WHAT I'M EXPLORING",researchTitle1:'The questions',researchTitle2:'that drive my work.',
       sectionProjects:'SELECTED WORK',projectAside:'RESEARCH IN PROGRESS',projectsTitle1:'Ideas, exploration,',projectsTitle2:'and ongoing work.',projectsIntro:'These are ongoing research directions and study activities, not claims of published results or released software.',viewProject:'Visit repository',
       sectionPublications:'PUBLICATIONS',publicationsAside:'SCHOLARLY OUTPUT',pubTitle1:'Research takes',pubTitle2:'time to develop.',noPubsTitle:'Publications will be listed here.',noPubsBody:'No publications have been added to this page. Future papers and preprints can be included with verified links.',comingSoon:'TO BE UPDATED',
@@ -22,7 +22,7 @@
       heroKicker:'计算机专业 · 硕士研究生',heroLineOne:'探索视觉信息',heroLineTwo:'更高效的',heroLineThree:'压缩与重建。',
       heroDesc:'我关注生成模型与学习式表征如何让图像压缩更高效，同时兼顾重建质量与感知体验。',
       exploreResearch:'了解研究方向',getInTouch:'联系我',affiliatedWith:'目前就读于',stageInput:'01 / 输入',stageLatent:'02 / 表征',stageDecode:'03 / 重建',stageVisual:'视觉信号',stageCompact:'紧凑 Token',stagePerceptual:'生成式重建',diagramNote:'生成式图像压缩的概念示意图',scrollDiscover:'向下浏览',
-      sectionAbout:'关于我',aboutTitle1:'保持好奇，',aboutTitle2:'认真研究。',aboutSecondary:'我尤其关注表征学习、码率约束与扩散式解码器之间的联系，希望通过系统的论文阅读和实验验证来探索新的研究思路。',atAGlance:'个人概况',labelRole:'当前身份',labelInstitute:'所在学校',labelPeriod:'就读时间',asideQuote:'更好的表征，是实现更好重建的基础。',
+      sectionAbout:'关于我',aboutTitle1:'保持好奇，',aboutTitle2:'认真研究。',aboutSecondary:'我尤其关注表征学习、码率约束与扩散式解码器之间的联系，希望通过系统的论文阅读和实验验证来探索新的研究思路。',atAGlance:'个人概况',labelRole:'当前身份',labelInstitute:'所在学校',labelPeriod:'就读时间',labelEducation:'教育经历',asideQuote:'更好的表征，是实现更好重建的基础。',
       sectionResearch:'研究兴趣',researchAside:'当前探索方向',researchTitle1:'我正在思考的',researchTitle2:'研究问题。',
       sectionProjects:'研究与项目',projectAside:'持续探索中',projectsTitle1:'想法、探索，',projectsTitle2:'以及正在进行的工作。',projectsIntro:'以下内容为正在开展的研究方向与学习活动，不代表已发表成果或已经公开的软件项目。',viewProject:'访问代码仓库',
       sectionPublications:'学术成果',publicationsAside:'论文与预印本',pubTitle1:'研究需要',pubTitle2:'持续积累。',noPubsTitle:'论文成果将在此展示。',noPubsBody:'目前尚未添加已公开发表的论文。后续可在确认论文信息后补充标题、作者、会议和公开链接。',comingSoon:'待更新',
@@ -66,6 +66,20 @@
       row.append(meta);list.append(row);
     });
   }
+  function renderEducation(){
+    const list=document.getElementById('education-list');
+    if(!list) return;
+    list.replaceChildren();
+    (profile.education||[]).forEach(edu=>{
+      const item=node('article','education-item'+(edu.current?' education-item--current':''));
+      const date=node('div','education-period',edu.period?.[language]||'');
+      const school=node('h3','education-school',edu.school?.[language]||'');
+      const major=node('p','education-major',edu.major?.[language]||'');
+      item.append(date,school,major);
+      list.append(item);
+    });
+    list.setAttribute('aria-label',language==='zh'?'教育经历':'Education history');
+  }
   function renderContacts(){
     const links=document.getElementById('contact-links');links.replaceChildren();
     function add(label,url,iconName){const a=node('a','contact-link');a.href=url;if(!url.startsWith('mailto:')){a.target='_blank';a.rel='noopener noreferrer';}a.innerHTML=svg(iconName);a.append(document.createTextNode(label+' ↗'));links.append(a);}
@@ -87,9 +101,9 @@
     document.getElementById('hero-university').textContent=language==='en'?profile.universityEn:profile.universityZh;
     document.getElementById('aside-degree').textContent=language==='en'?profile.degreeEn:profile.degreeZh;
     document.getElementById('aside-university').textContent=language==='en'?profile.universityEn:profile.universityZh;
-    document.getElementById('aside-period').textContent=profile.educationPeriod||'';
+    document.getElementById('aside-period').textContent=typeof profile.educationPeriod==='string'?profile.educationPeriod:(profile.educationPeriod?.[language]||'');
     document.getElementById('profile-bio').textContent=profile.bio?.[language]||'';
-    renderCards();renderContacts();
+    renderCards();renderEducation();renderContacts();
   }
   languageButton.addEventListener('click',()=>{language=language==='en'?'zh':'en';try{localStorage.setItem('academic-language',language);}catch{}renderLanguage();});
   let theme='dark';

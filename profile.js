@@ -9,21 +9,36 @@ window.SITE_PROFILE = {
   initials: 'LW',
   universityEn: 'Wuhan University of Technology',
   universityZh: '武汉理工大学',
-  degreeEn: 'M.S. Student in Computer Science',
-  degreeZh: '计算机专业硕士研究生',
-  educationPeriod: '2026 — Present',
+  degreeEn: 'M.S. Student in Computer Science and Technology',
+  degreeZh: '计算机科学与技术专业硕士研究生',
+  educationPeriod: { en: 'Sep 2026 — Present', zh: '2026年9月 — 至今' },
+  // 教育经历按时间倒序填写，页面会自动生成中英文时间线。
+  education: [
+    {
+      school: { en: 'Wuhan University of Technology', zh: '武汉理工大学' },
+      major: { en: 'Master’s Student · Computer Science and Technology', zh: '计算机科学与技术 · 硕士研究生' },
+      period: { en: 'Sep 2026 — Present', zh: '2026年9月 — 至今' },
+      current: true
+    },
+    {
+      school: { en: 'Jingdezhen Ceramic University', zh: '景德镇陶瓷大学' },
+      major: { en: 'Undergraduate · Computer Science and Technology', zh: '计算机科学与技术 · 本科' },
+      period: { en: 'Sep 2021 — Jun 2025', zh: '2021年9月 — 2025年6月' },
+      current: false
+    }
+  ],
   
   // 重要：填写你自己的信息，留空时页面不会显示无效链接。
-  githubUsername: '',       // e.g. 'your-github-username'（不要填 github.com）
-  email: '',                // e.g. 'you@example.com'
+  githubUsername: 'wendaliu1213',       // e.g. 'your-github-username'（不要填 github.com）
+  email: 'wendaliu@whut.edu.cn',                // e.g. 'you@example.com'
   googleScholarUrl: '',     // 可选：完整的 https:// 链接
   orcidUrl: '',             // 可选：完整的 https:// 链接
   cvFile: '',               // 可选：'assets/CV.pdf'，并把 PDF 放到对应目录
 
   // 简介、研究领域与项目描述都是可编辑的中英双语文本。
   bio: {
-    en: 'I am a master’s student in Computer Science at Wuhan University of Technology. My research interests lie at the intersection of learned image compression and generative modeling, with a focus on diffusion-based reconstruction, discrete representations, and the rate–distortion–perception trade-off.',
-    zh: '我目前就读于武汉理工大学计算机相关专业硕士，主要关注学习式图像压缩与生成模型的交叉研究，尤其是扩散模型重建、离散表示，以及码率—失真—感知质量之间的权衡。'
+    en: 'I am pursuing a master’s degree in Computer Science and Technology at Wuhan University of Technology (since September 2026). I previously studied Computer Science and Technology at Jingdezhen Ceramic University (September 2021 – June 2025). My research interests include learned image compression, diffusion-based reconstruction, and rate–distortion–perception optimization.',
+    zh: '我于2021年9月至2025年6月在景德镇陶瓷大学学习计算机科学与技术专业，2026年9月起在武汉理工大学攻读计算机科学与技术硕士学位。目前主要关注学习式图像压缩与生成模型的交叉研究，尤其是扩散模型重建、离散表示，以及码率—失真—感知质量之间的权衡。'
   },
   focus: [
     {
